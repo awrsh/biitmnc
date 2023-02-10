@@ -1,20 +1,17 @@
 @font-face {
   font-family: "IBM-FONT";
   src: local("IBM-FONT"),
-    url(../fonts/IBMPlexSansCondensed-Regular.ttf)
-      format("truetype");
+    url(../fonts/IBMPlexSansCondensed-Regular.ttf) format("truetype");
 }
 @font-face {
   font-family: "Harmony";
   src: local("Harmony"),
-    url(../fonts/HarmonyOS_Sans_Bold.woff2)
-      format("truetype");
+    url(../fonts/HarmonyOS_Sans_Bold.woff2) format("truetype");
 }
 @font-face {
   font-family: "Harmony-medium";
   src: local("Harmony"),
-    url(../fonts/HarmonyOS_Sans_Medium.woff2)
-      format("truetype");
+    url(../fonts/HarmonyOS_Sans_Medium.woff2) format("truetype");
 }
 @font-face {
   font-family: "Binance-medium";
@@ -24,15 +21,13 @@
 @font-face {
   font-family: "Binance-bold";
   src: local("Binance"),
-    url(../fonts/BinancePlex-SemiBold.otf)
-      format("truetype");
+    url(../fonts/BinancePlex-SemiBold.otf) format("truetype");
 }
 
 @font-face {
   font-family: "IconFont";
   src: local("IconFont"),
-    url(../fonts/iconfont-OKX-header-footer.woff2)
-      format("truetype");
+    url(../fonts/iconfont-OKX-header-footer.woff2) format("truetype");
 }
 
 body {
@@ -216,7 +211,7 @@ div.pricing::-webkit-scrollbar-thumb:hover {
   margin: 15px 0;
   padding: 9px 3px;
   border-radius: 6px;
-  border: .5px solid gray;
+  border: 0.5px solid gray;
 }
 .counter_trade > button {
   background-color: transparent;
@@ -225,29 +220,41 @@ div.pricing::-webkit-scrollbar-thumb:hover {
   font-size: 20px;
 }
 
-.counter_trade > button:nth-child(1){
+.counter_trade > button:nth-child(1) {
   border-right: 1px solid gray;
   padding: 0 15px;
 }
-.counter_trade > button:nth-child(3){
+.counter_trade > button:nth-child(3) {
   border-left: 1px solid gray;
   padding: 0 15px;
 }
-.container_btns_trade{
+.container_btns_trade {
   border-radius: 6px;
   overflow: hidden;
 }
-.container_btns_trade>button{
-flex: 1;
-width: 100%;
-background-color: transparent;
-border: hidden;
-padding: 10px 0;
-border-radius: 6px;
-transition: all .4 ease-in-out;
-
+.container_btns_trade > button {
+  flex: 1;
+  width: 100%;
+  background-color: transparent;
+  border: hidden;
+  padding: 10px 0;
+  border-radius: 6px;
+  transition: all 0.4 ease-in-out;
 }
-.container_btns_trade>button.active{
+.container_btns_trade > button.active {
   background-color: #252a44;
   color: white;
+}
+
+.land-title span {
+  font-size: 13px;
+  color: #bac1d7;
+  margin-bottom: 15px;
+}
+
+.land-title h5 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 25px;
 }

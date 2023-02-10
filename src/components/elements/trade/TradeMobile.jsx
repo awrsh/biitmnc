@@ -40,40 +40,42 @@ const TradeMobile = () => {
       <div style={{ flex: 1 }}>
         <div className="px-3">
           <div className="d-flex gap-3 mt-2 justify-content-between align-items-center">
-            <p style={{ fontSize: "11px" }}>Price(USDT)</p>
-            <p style={{ fontSize: "11px" }}>Amount(MX)</p>
+            <p style={{ fontSize: "11px", fontWeight: "bold" }}>Price(USDT)</p>
+            <p style={{ fontSize: "11px", fontWeight: "bold" }}>Amount(MX)</p>
           </div>
 
-          {Array.from({ length: 10 }).map((i,index) => (
+          {Array.from({ length: 10 }).map((i, index) => (
             <div
-            key={index}
+              key={index}
               style={{
-                fontFamily: "Harmony",
+                fontFamily: "IBM-FONT",
                 fontSize: "11px",
                 padding: "1px 3px",
+                fontWeight: "bold"
               }}
               className="d-flex w-100 my-2 justify-content-between position-relative align-items-center"
             >
-              <div style={{background:"#12571286",right:0,width:`${50+index}%`}} className="position-absolute py-2"></div>
+              <div style={{ background: "#05c48e", opacity: ".4", right: 0, width: `${50 + index}%` }} className="position-absolute py-2"></div>
               <p className="p-0 m-0">0.8367</p>
-              <p className="p-0  text-secondary m-0">
+              <p className="p-0  text-white m-0" style={{fontFamily: "Binance-medium"}}>
                 12.270
               </p>
             </div>
           ))}
-          {Array.from({ length: 10 }).map((i,index) => (
+          {Array.from({ length: 10 }).map((i, index) => (
             <div
-            key={index}
+              key={index}
               style={{
-                fontFamily: "Harmony",
+                fontFamily: "IBM-FONT",
                 fontSize: "11px",
                 padding: "1px 3px",
+                fontWeight: "bold"
               }}
               className="d-flex w-100 my-2 justify-content-between position-relative align-items-center"
             >
-              <div style={{background:"#85111169",right:0,width:`${90-index}%`}} className="position-absolute py-2"></div>
+              <div style={{ background: "#df473d", opacity: ".4", right: 0, width: `${90 - index}%` }} className="position-absolute py-2"></div>
               <p className="p-0 m-0">0.8367</p>
-              <p className="p-0  text-secondary m-0">
+              <p className="p-0  text-white m-0" style={{fontFamily: "Binance-medium"}}>
                 12.270
               </p>
             </div>

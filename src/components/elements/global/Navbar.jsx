@@ -56,6 +56,7 @@ export default function Navbar({ open }) {
 
   const handleClose = () => {
     setAnchorEl(null);
+    setitems([]);
   };
 
   const handleClickBtc = (event) => {
@@ -134,7 +135,10 @@ export default function Navbar({ open }) {
                     to="/"
                     style={{ marginRight: "15px" }}
                   >
-                    BuyCrypto
+                    Buy/Sell Crypto
+                  </Link>
+                  <Link className="logo" to="/markets" style={{ marginRight: "15px" }}>
+                    Markets
                   </Link>
                   <Link className="logo" to="/trade">
                     Trade
@@ -256,13 +260,14 @@ export default function Navbar({ open }) {
 
             <Box className="d-flex justify-content-between d-lg-block d-md-block d-none ">
               {location.pathname != "/trade" && (
-                <Link
+                <Button
                   className="logo"
                   style={{ marginRight: "15px" }}
                   onClick={handleClick(wallet)}
+                  onMouseOver={handleClick(wallet)}
                 >
                   Wallet <ArrowDropDownIcon />
-                </Link>
+                </Button>
               )}
               {location.pathname != "/trade" && (
                 <Link
@@ -321,13 +326,13 @@ export default function Navbar({ open }) {
         style={{ backgroundColor: "#121212" }}
         className="d-flex gap-5 d-md-none justify-content-between align-items-center p-2 px-2 "
       >
-        <div className="d-flex align-items-center gap-2"  style={{flex:1}}>
+        <div className="d-flex align-items-center gap-2" style={{ flex: 1 }}>
           <AccountCircleIcon
             onClick={() => setSideMenu(!sideMenu)}
             sx={{ width: 40, height: 40, color: "#444444" }}
           />
           <div
-            style={{ backgroundColor: "#444444",flex:1 }}
+            style={{ backgroundColor: "#444444", flex: 1 }}
             className="d-flex p-1  align-items-center rounded-4"
           >
             <SearchIcon

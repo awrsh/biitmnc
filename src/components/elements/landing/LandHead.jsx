@@ -10,7 +10,7 @@ import space2 from "../../../assets/slide2.jpg";
 import space3 from "../../../assets/slide3.jpg";
 import space4 from "../../../assets/slide4.jpg";
 import LightLogo from "../../../assets/logolight.png";
-
+import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Pagination,
@@ -21,6 +21,8 @@ import SwiperCore, {
 
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
+import "swiper/css/navigation";
+// import required modules
 SwiperCore.use([
   Pagination,
   Navigation,
@@ -32,6 +34,8 @@ export default function LandHead() {
   return (
     <>
       <Swiper
+        navigation={true}
+        modules={[Navigation]}
         className="text-end my-3 px-3 d-md-none"
         effect="fade"
         spaceBetween={60}
@@ -44,17 +48,17 @@ export default function LandHead() {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        // breakpoints={{
-        //     // when window width is >= 640px
-        //     1220: {
-        //         height: "450px"
-        //     },
-        //     // when window width is >= 768px
-        //     768: {
-        //         width: 768,
-        //         slidesPerView: 2,
-        //     },
-        // }}
+      // breakpoints={{
+      //     // when window width is >= 640px
+      //     1220: {
+      //         height: "450px"
+      //     },
+      //     // when window width is >= 768px
+      //     768: {
+      //         width: 768,
+      //         slidesPerView: 2,
+      //     },
+      // }}
       >
         <SwiperSlide>
           <Box
@@ -166,6 +170,8 @@ export default function LandHead() {
 
         <div className="col-lg-8 d-lg-block d-none">
           <Swiper
+            navigation={true}
+            modules={[Navigation]}
             className="text-end"
             effect="fade"
             spaceBetween={60}
@@ -178,17 +184,17 @@ export default function LandHead() {
               delay: 5000,
               disableOnInteraction: false,
             }}
-            // breakpoints={{
-            //     // when window width is >= 640px
-            //     1220: {
-            //         height: "450px"
-            //     },
-            //     // when window width is >= 768px
-            //     768: {
-            //         width: 768,
-            //         slidesPerView: 2,
-            //     },
-            // }}
+          // breakpoints={{
+          //     // when window width is >= 640px
+          //     1220: {
+          //         height: "450px"
+          //     },
+          //     // when window width is >= 768px
+          //     768: {
+          //         width: 768,
+          //         slidesPerView: 2,
+          //     },
+          // }}
           >
             <SwiperSlide>
               <Box

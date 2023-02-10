@@ -27,7 +27,7 @@ export default function Trade() {
     let size = window.innerHeight;
     setPageHeight(size - 55);
     setRowHeight(size - size / 2.8);
-    setRow2Height(size - (size / 2 + 20));
+    setRow2Height(size - (size / 4 + 20));
     setRow3Height(size - (rowheight + 80));
     setRow4Height(size - rowheight);
   };
@@ -66,15 +66,14 @@ export default function Trade() {
   return (
     <div
       className="container-fluid"
-      style={{ height: pageheight }}
+      style={{ maxHeight: "100vh", overflow: "hidden" }}
     >
       <div className="container_tab_trade d-none d-md-none">
         {tabTrade.map((tab, index) => (
           <button
             onClick={() => clickSelectTab(index)}
-            className={`${
-              select === index ? "active" : ""
-            }`}
+            className={`${select === index ? "active" : ""
+              }`}
           >
             {tab.name}
           </button>
@@ -82,19 +81,19 @@ export default function Trade() {
       </div>
       <div className="container_trade_meniu_bootom d-md-none">
         <div className="container_menu_trade">
-          <FiMenu onClick={()=>setOpenSidebar(true)} size={30} />
+          <FiMenu onClick={() => setOpenSidebar(true)} size={30} />
           <h5 className="">BTC3/USDT</h5>
           <p className="bg-success">+3.47%</p>
         </div>
         <div className="d-flex">
-          <AiOutlineArrowsAlt onClick={()=>navigate("/trade/chart")} size={25} />
+          <AiOutlineArrowsAlt onClick={() => navigate("/trade/chart")} size={25} />
           <AiOutlineStar size={25} />
         </div>
       </div>
       <div className="row ">
         <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-12 p-0   ">
           <div className="w-100 border-right">
-            <TradeChart sizing={rowheight} />
+            <TradeChart sizing={500} />
           </div>
           <div className="bordertop">
             <TradeFooter height={230} />
@@ -128,7 +127,7 @@ export default function Trade() {
           </div>
         </div>
       </div>
-      <SidebarTrades setOpenSidebar={setOpenSidebar} openSidebar={openSidebar}/>
+      <SidebarTrades setOpenSidebar={setOpenSidebar} openSidebar={openSidebar} />
     </div>
   );
 }
