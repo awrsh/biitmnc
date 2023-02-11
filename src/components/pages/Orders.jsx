@@ -36,9 +36,9 @@ export default function Orders() {
           aria-label="Vertical tabs example"
           sx={{ width: "100%" }}
         >
-          <Tab label="Open Orders" sx={{ py: 3 , maxWidth: "100%" }} {...a11yProps(0)} />
-          <Tab label="Order History" sx={{ py: 3 , maxWidth: "100%" }} {...a11yProps(1)} />
-          <Tab label="Trade History" className='d-none' sx={{ py: 3 , maxWidth: "100%" }} {...a11yProps(2)} />
+          <Tab label="Open Orders" sx={{ py: 3 , maxWidth: "100%" , fontSize: "16px"}} {...a11yProps(0)} />
+          <Tab label="Order History" sx={{ py: 3 , maxWidth: "100%" , fontSize: "16px"}} {...a11yProps(1)} />
+          <Tab label="Trade History"  sx={{ py: 3 , maxWidth: "100%" , fontSize: "16px"}} {...a11yProps(2)} />
 
         </Tabs>
       </Box>

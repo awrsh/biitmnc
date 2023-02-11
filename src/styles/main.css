@@ -258,3 +258,13 @@ div.pricing::-webkit-scrollbar-thumb:hover {
   color: #fff;
   margin-bottom: 25px;
 }
+
+.PhoneInputInput {
+  background-color: #121212;
+  color: #fff;
+}
+
+
+.css-1kzcb5-MuiFormControlLabel-root .MuiFormControlLabel-label {
+  font-size: 12px;
+}

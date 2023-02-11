@@ -6,11 +6,12 @@ import MuiPhoneNumber from 'material-ui-phone-number';
 import { QrCode, Visibility, VisibilityOff } from '@mui/icons-material';
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
+import { Link } from 'react-router-dom';
 
 export default function MobileNumber() {
     const [password, setPassword] = useState("");
     const [typing, setTyping] = useState("password");
-    const [value,setValue]=useState("");
+    const [value, setValue] = useState("");
     const handlePassword = (props) => () => {
         setTyping(props)
     }
@@ -20,9 +21,9 @@ export default function MobileNumber() {
                 <Box>
                     <PhoneInput
                         defaultCountry="RU"
-                         value={value}
-                        onChange={setValue} 
-                        />
+                        value={value}
+                        onChange={setValue}
+                    />
 
                 </Box>
                 <Box>
@@ -41,12 +42,15 @@ export default function MobileNumber() {
                         }} />
                     <PasswordStrengthBar password={password} />
                 </Box>
-
+                <Link to="/">
+                    Forgot Password?
+                </Link>
             </Box>
             <TextField label="Referral code (optional)" color="light" fullWidth sx={{ textcolor: "#000", height: '7ch', my: 2 }} variant="outlined" type="text" />
             <FormGroup>
-                <FormControlLabel control={<Checkbox sx={{ mb: 3 }} color="light" />}
-                    label="I have read and agree to BitMNC Terms of Service and Privacy Policy" sx={{ size: '20hv' }} inputProps={{
+                <FormControlLabel control={<Checkbox sx={{ mb: 0, fontSize: "10px" }} color="light" />}
+                    label="I have read and agree to BitMNC Terms of Service and Privacy Policy"
+                    sx={{ color: "#8C8E90" }} inputProps={{
                         style: { dir: "rtl" }
                     }} />
             </FormGroup>

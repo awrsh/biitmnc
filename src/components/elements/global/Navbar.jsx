@@ -262,7 +262,7 @@ export default function Navbar({ open }) {
               {location.pathname != "/trade" && (
                 <Button
                   className="logo"
-                  style={{ marginRight: "15px" }}
+                  style={{ marginRight: "15px" , color : "#fff" , padding : "0" }}
                   onClick={handleClick(wallet)}
                   onMouseOver={handleClick(wallet)}
                 >

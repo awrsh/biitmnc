@@ -34,7 +34,7 @@ export default function TradeHistory() {
     <Box className="container-fluid">
         <Box className="row gx-0 p-4">
         <Typography>Spot</Typography>
-            <Typography variant="h4">
+            <Typography variant="h4" sx={{fontSize : "18px" , fontWeight: "600"}}>
                 Trade History
             </Typography>
         </Box>

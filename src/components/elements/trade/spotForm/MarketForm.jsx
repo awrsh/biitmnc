@@ -6,7 +6,8 @@ export default function MarketForm({ coin, btn }) {
   const mstyle = {
     m: 1,
     color: "white",
-    ml: 0
+    ml: 0,
+    backGroundColor : "red"
   }
 
   const marks = [
