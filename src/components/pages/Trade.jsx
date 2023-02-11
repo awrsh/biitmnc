@@ -66,7 +66,7 @@ export default function Trade() {
   return (
     <div
       className="container-fluid"
-      style={{ height: pageheight }}
+      style={{ height: pageheight , overflow:"hidden"}}
     >
       <div className="container_tab_trade d-none d-md-none">
         {tabTrade.map((tab, index) => (
@@ -94,7 +94,7 @@ export default function Trade() {
       <div className="row ">
         <div className="col-xxl-8 col-xl-8 col-lg-7 col-md-7 col-12 p-0   ">
           <div className="w-100 border-right">
-            <TradeChart sizing={rowheight} />
+            <TradeChart sizing={380} />
           </div>
           <div className="bordertop">
             <TradeFooter height={230} />
@@ -103,13 +103,13 @@ export default function Trade() {
         <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-12 row teeeeeet gx-0  d-none d-md-flex">
           <div
             className="col-lg-6 col-md-6 col-12 gx-0  overflow-hidden pricing borderbottom"
-            style={{ height: rowheight }}
+            style={{ height: "250px" }}
           >
             <PriceList />
           </div>
           <div
             className="col-lg-6 col-md-6 col-12 gx-0 pricing borderbottom borderingl "
-            style={{ height: rowheight }}
+            style={{ height: "250px",overflow:"hidden" }}
           >
             <div className="d-flex justify-content-center">
               <Typography variant="p" component="div">

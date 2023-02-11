@@ -10,9 +10,9 @@ export default function TableComponent({heads,bodys}) {
   return (
 
     <Box sx={{ width: 'auto' }}>
-        <TableContainer className='overflow-hidden' sx={{maxHeight:150}}>
+        <TableContainer className='overflow-hidden' >
             <Table>
-                <TableBody sx={{height:"200px"}}>
+                <TableBody>
                         {bodys.map((d,idx)=>(
                             <TableRow key={idx} sx={trs2}>
                             <TableCell sx={d.forth==='g' ? { color: "#05c48e",fontSize:"17px" } : { color: '#df473d',fontSize:"17px" }}>{d.first}</TableCell>
